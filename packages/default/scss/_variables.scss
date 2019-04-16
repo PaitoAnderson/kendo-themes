@@ -1167,6 +1167,8 @@ $modal-inner-padding: 1em;
 
 $scheduler-current-time-color: #f00;
 
+$scheduler-nonwork-bg: mix( $panel-text, $panel-bg, 3% );
+
 
 // PDF viewer
 $pdf-viewer-bg: null !default;
@@ -1183,6 +1185,26 @@ $pdf-viewer-page-bg: $panel-bg !default;
 $pdf-viewer-page-text: $panel-text !default;
 $pdf-viewer-page-border: $panel-border !default;
 $pdf-viewer-page-shadow: 0 0 ($pdf-viewer-page-spacing / 2) $pdf-viewer-page-border !default;
+
+
+// Adaptive Common
+$adaptive-content-bg: $base-bg !default;
+$adaptive-content-text: $accent;
+
+$adaptive-menu-bg: $accent;
+$adaptive-menu-text: white;
+
+$adaptive-menu-clear-text: $accent;
+
+$adaptive-menu-item-border: $grid-border;
+$adaptive-menu-title-text: $base-text;
+
+// Adaptive Grid
+$adaptive-grid-sort-text: $accent;
+
+// Adaptive Scheduler
+$adaptive-scheduler-current-text: $accent;
+$adaptive-scheduler-base-text: inherit;
 
 
 // Config maps

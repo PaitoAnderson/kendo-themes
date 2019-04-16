@@ -1179,6 +1179,27 @@ $scheduler-timecolumn-width: 11em;
 
 $scheduler-current-time-color: #f00;
 
+$scheduler-nonwork-bg: mix( $panel-text, $panel-bg, ($color-level-step / 2) );
+
+// Adaptive Common
+$adaptive-content-bg: $base-bg !default;
+$adaptive-content-text: $accent;
+
+$adaptive-menu-bg: $accent;
+$adaptive-menu-text: white;
+
+$adaptive-menu-clear-text: $accent;
+
+$adaptive-menu-item-border: $grid-border;
+$adaptive-menu-title-text: $base-text;
+
+// Adaptive Grid
+$adaptive-grid-sort-text: $accent;
+
+// Adaptive Scheduler
+$adaptive-scheduler-current-text: $accent;
+$adaptive-scheduler-base-text: inherit;
+
 
 // PDF viewer
 $pdf-viewer-bg: null !default;
