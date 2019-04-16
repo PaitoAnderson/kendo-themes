@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" class="k-typography">
+
+<head>
+    <title>Adaptive Grid Filter Bool</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../packages/default/dist/all.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/scripts.js"></script>
+
+    <style>
+        #test-area {
+            grid-template-columns: 1fr;
+            align-items: top;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="test-area" class="grid">
+
+        <div class="k-pane-wrapper k-widget" style="height: 550px;">
+            <div data-role="pane" class="k-pane" style="">
+                <div data-role="view" class="k-grid-filter-menu k-view k-widget"
+                    id="9ca713f7-2460-43ad-a12b-b06606f2eafb" role="view" style="">
+                    <div data-role="header" class="k-header"><a href="#" class="k-header-cancel k-link" title="Cancel"
+                            aria-label="Cancel"><span class="k-icon k-i-arrow-chevron-left"></span></a>Filter in
+                        Discontinued<a href="#" class="k-header-done k-link" title="Done" aria-label="Done"><span
+                                class="k-icon k-i-check"></span></a></div>
+                    <div data-role="content" class="k-stretched-view k-content">
+                        <form title="Show items with value that:" class="k-filter-menu k-mobile-list">
+                            <ul>
+                                <li><span class="k-filter-help-text">Show items with value that:</span>
+                                    <ul class="k-multicheck-bool-wrap">
+                                        <li class="k-item"><label class="k-label"><input class="k-check" type="radio"
+                                                    data-bind="checked: filters[0].value" value="true"
+                                                    name="filters[0].value"><span class="k-item-title">is
+                                                    true</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input class="k-check" type="radio"
+                                                    data-bind="checked: filters[0].value" value="false"
+                                                    name="filters[0].value"><span class="k-item-title">is
+                                                    false</span></label></li>
+                                    </ul>
+                                </li>
+                                <li class="k-item k-clear-wrap"><span class="k-label k-clear" title="Clear"
+                                        aria-label="Clear">Clear</span></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

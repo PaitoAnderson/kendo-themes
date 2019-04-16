@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en" class="k-typography">
+
+<head>
+    <title>Adaptive Scheduler Edit</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../packages/default/dist/all.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/scripts.js"></script>
+
+    <style>
+        #test-area {
+            grid-template-columns: 1fr;
+            align-items: top;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="test-area" class="grid">
+
+        <div class="k-pane-wrapper k-widget" style="height: 600px;">
+            <div data-role="pane" class="k-pane" style="">
+                <div data-role="view" class="k-popup-edit-form k-scheduler-edit-form k-mobile-list k-view k-widget"
+                    data-uid="638dcd95-3dee-4889-b0f8-ac4c0b3fd467" style="" id="eba8b09a-3140-4fee-93b8-0fbce143f764"
+                    role="view">
+                    <div data-role="header" class="k-header"><a href="\#"
+                            class="k-header-cancel k-scheduler-cancel k-link" title="Cancel" aria-label="Cancel"><span
+                                class="k-icon k-i-arrow-chevron-left"></span></a>Event<a href="\#"
+                            class="k-header-done k-scheduler-update k-link" title="Save" aria-label="Save"><span
+                                class="k-icon k-i-check"></span></a></div>
+                    <div data-role="content" class="k-stretched-view k-content">
+                        <ul>
+                            <li class="k-item"><label class="k-label"><span class="k-item-title">Title</span>
+                                    <div data-container-for="title"><input type="text" class="k-input k-textbox"
+                                            name="title" title="Title" required="required" data-bind="value:title">
+                                    </div>
+                                </label></li>
+                            <li class="k-item"><label class="k-label"><span class="k-item-title">Start</span>
+                                    <div data-container-for="start"><input type="datetime-local" required=""
+                                            data-type="datetime-local" data-bind="value:start, invisible:isAllDay"
+                                            data-validate="true" name="start" title="Start"
+                                            data-timezone="Etc/UTC"><input type="date" required="" data-type="date"
+                                            data-bind="value:start,visible:isAllDay" data-validate="false" name="start"
+                                            title="Start" data-timezone="Etc/UTC" style="display: none;"><span
+                                            data-for="start" class="k-invalid-msg" style="display: none;"></span></div>
+                                </label></li>
+                            <li class="k-item"><label class="k-label"><span class="k-item-title">End</span>
+                                    <div data-container-for="end"><input type="datetime-local" required=""
+                                            data-type="datetime-local" data-bind="value:end, invisible:isAllDay"
+                                            data-validate="true" name="end" title="End" data-timezone="Etc/UTC"><input
+                                            type="date" required="" data-type="date"
+                                            data-bind="value:end,visible:isAllDay" data-validate="false" name="end"
+                                            title="End" data-timezone="Etc/UTC" style="display: none;"><span
+                                            data-for="end" class="k-invalid-msg" style="display: none;"></span></div>
+                                </label></li>
+                            <li class="k-item"><label class="k-label"><span class="k-item-title">All day event</span>
+                                    <div data-container-for="isAllDay"><span class="k-switch k-widget k-switch-off"
+                                            role="switch" tabindex="0" aria-checked="false"><input type="checkbox"
+                                                data-role="switch" data-bind="value:isAllDay"><span
+                                                class="k-switch-container"><span
+                                                    class="k-switch-label-on">On</span><span
+                                                    class="k-switch-label-off">Off</span><span
+                                                    class="k-switch-handle"></span></span></span></div>
+                                </label></li>
+                        </ul>
+                        <ul>
+                            <li class="k-item"><label class="k-label"
+                                    data-bind="css: { k-state-disabled: isAllDay }"><span
+                                        class="k-item-title">Timezone</span>
+                                    <div data-container-for="timezone"><span class="k-timezone-label">No
+                                            timezone</span><span class="k-icon k-i-arrow-chevron-right"></span></div>
+                                </label></li>
+                            <div class="k-popup-edit-form k-scheduler-edit-form k-scheduler-timezones"
+                                style="display:none">
+                                <ul>
+                                    <li class="k-item"><label class="k-label"><span class="k-item-title">Use separate
+                                                start and end time zones</span><span
+                                                class="k-switch k-widget k-switch-off" role="switch" tabindex="0"
+                                                aria-checked="false"><input class="k-timezone-toggle" data-role="switch"
+                                                    type="checkbox"><span class="k-switch-container"><span
+                                                        class="k-switch-label-on">On</span><span
+                                                        class="k-switch-label-off">Off</span><span
+                                                        class="k-switch-handle"></span></span></span></label></li>
+                                    <li class="k-item"><label class="k-label"><span class="k-item-title">Start
+                                                timezone</span>
+                                            <div data-container-for="startTimezone">
+                                                <div class="k-mobiletimezoneeditor" data-bind="value:startTimezone"
+                                                    name="startTimezone" data-role="mobiletimezoneeditor"><select>
+                                                        <option value="">No timezone</option>
+                                                        <option value="Morocco Standard Time">(GMT) Casablanca</option>
+                                                        <option value="GMT Standard Time">(GMT) Greenwich Mean Time :
+                                                            Dublin, Edinburgh, Lisbon, London</option>
+                                                        <option value="Greenwich Standard Time">(GMT) Monrovia,
+                                                            Reykjavik</option>
+                                                        <option value="W. Europe Standard Time">(GMT+01:00) Amsterdam,
+                                                            Berlin, Bern, Rome, Stockholm, Vienna</option>
+                                                        <option value="Central Europe Standard Time">(GMT+01:00)
+                                                            Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                                                        <option value="Romance Standard Time">(GMT+01:00) Brussels,
+                                                            Copenhagen, Madrid, Paris</option>
+                                                        <option value="Central European Standard Time">(GMT+01:00)
+                                                            Sarajevo, Skopje, Warsaw, Zagreb</option>
+                                                        <option value="W. Central Africa Standard Time">(GMT+01:00) West
+                                                            Central Africa</option>
+                                                        <option value="Jordan Standard Time">(GMT+02:00) Amman</option>
+                                                        <option value="GTB Standard Time">(GMT+02:00) Athens, Bucharest,
+                                                            Istanbul</option>
+                                                        <option value="Middle East Standard Time">(GMT+02:00) Beirut
+                                                        </option>
+                                                        <option value="Egypt Standard Time">(GMT+02:00) Cairo</option>
+                                                        <option value="South Africa Standard Time">(GMT+02:00) Harare,
+                                                            Pretoria</option>
+                                                        <option value="FLE Standard Time">(GMT+02:00) Helsinki, Kyiv,
+                                                            Riga, Sofia, Tallinn, Vilnius</option>
+                                                        <option value="Israel Standard Time">(GMT+02:00) Jerusalem
+                                                        </option>
+                                                        <option value="E. Europe Standard Time">(GMT+02:00) Minsk
+                                                        </option>
+                                                        <option value="Namibia Standard Time">(GMT+02:00) Windhoek
+                                                        </option>
+                                                        <option value="Arabic Standard Time">(GMT+03:00) Baghdad
+                                                        </option>
+                                                        <option value="Arab Standard Time">(GMT+03:00) Kuwait, Riyadh
+                                                        </option>
+                                                        <option value="Russian Standard Time">(GMT+03:00) Moscow, St.
+                                                            Petersburg, Volgograd</option>
+                                                        <option value="E. Africa Standard Time">(GMT+03:00) Nairobi
+                                                        </option>
+                                                        <option value="Georgian Standard Time">(GMT+03:00) Tbilisi
+                                                        </option>
+                                                        <option value="Iran Standard Time">(GMT+03:30) Tehran</option>
+                                                        <option value="Arabian Standard Time">(GMT+04:00) Abu Dhabi,
+                                                            Muscat</option>
+                                                        <option value="Azerbaijan Standard Time">(GMT+04:00) Baku
+                                                        </option>
+                                                        <option value="Mauritius Standard Time">(GMT+04:00) Port Louis
+                                                        </option>
+                                                        <option value="Caucasus Standard Time">(GMT+04:00) Yerevan
+                                                        </option>
+                                                        <option value="Afghanistan Standard Time">(GMT+04:30) Kabul
+                                                        </option>
+                                                        <option value="Ekaterinburg Standard Time">(GMT+05:00)
+                                                            Ekaterinburg</option>
+                                                        <option value="Pakistan Standard Time">(GMT+05:00) Islamabad,
+                                                            Karachi</option>
+                                                        <option value="West Asia Standard Time">(GMT+05:00) Tashkent
+                                                        </option>
+                                                        <option value="India Standard Time">(GMT+05:30) Chennai,
+                                                            Kolkata, Mumbai, New Delhi</option>
+                                                        <option value="Sri Lanka Standard Time">(GMT+05:30) Sri
+                                                            Jayawardenepura</option>
+                                                        <option value="Nepal Standard Time">(GMT+05:45) Kathmandu
+                                                        </option>
+                                                        <option value="N. Central Asia Standard Time">(GMT+06:00)
+                                                            Almaty, Novosibirsk</option>
+                                                        <option value="Central Asia Standard Time">(GMT+06:00) Astana,
+                                                            Dhaka</option>
+                                                        <option value="Myanmar Standard Time">(GMT+06:30) Yangon
+                                                            (Rangoon)</option>
+                                                        <option value="SE Asia Standard Time">(GMT+07:00) Bangkok,
+                                                            Hanoi, Jakarta</option>
+                                                        <option value="North Asia Standard Time">(GMT+07:00) Krasnoyarsk
+                                                        </option>
+                                                        <option value="China Standard Time">(GMT+08:00) Beijing,
+                                                            Chongqing, Hong Kong, Urumqi</option>
+                                                        <option value="North Asia East Standard Time">(GMT+08:00)
+                                                            Irkutsk, Ulaan Bataar</option>
+                                                        <option value="Singapore Standard Time">(GMT+08:00) Kuala
+                                                            Lumpur, Singapore</option>
+                                                        <option value="W. Australia Standard Time">(GMT+08:00) Perth
+                                                        </option>
+                                                        <option value="Taipei Standard Time">(GMT+08:00) Taipei</option>
+                                                        <option value="Tokyo Standard Time">(GMT+09:00) Osaka, Sapporo,
+                                                            Tokyo</option>
+                                                        <option value="Korea Standard Time">(GMT+09:00) Seoul</option>
+                                                        <option value="Yakutsk Standard Time">(GMT+09:00) Yakutsk
+                                                        </option>
+                                                        <option value="Cen. Australia Standard Time">(GMT+09:30)
+                                                            Adelaide</option>
+                                                        <option value="AUS Central Standard Time">(GMT+09:30) Darwin
+                                                        </option>
+                                                        <option value="E. Australia Standard Time">(GMT+10:00) Brisbane
+                                                        </option>
+                                                        <option value="AUS Eastern Standard Time">(GMT+10:00) Canberra,
+                                                            Melbourne, Sydney</option>
+                                                        <option value="West Pacific Standard Time">(GMT+10:00) Guam,
+                                                            Port Moresby</option>
+                                                        <option value="Tasmania Standard Time">(GMT+10:00) Hobart
+                                                        </option>
+                                                        <option value="Vladivostok Standard Time">(GMT+10:00)
+                                                            Vladivostok</option>
+                                                        <option value="Central Pacific Standard Time">(GMT+11:00)
+                                                            Magadan, Solomon Is., New Caledonia</option>
+                                                        <option value="New Zealand Standard Time">(GMT+12:00) Auckland,
+                                                            Wellington</option>
+                                                        <option value="Fiji Standard Time">(GMT+12:00) Fiji, Kamchatka,
+                                                            Marshall Is.</option>
+                                                        <option value="Tonga Standard Time">(GMT+13:00) Nuku'alofa
+                                                        </option>
+                                                        <option value="Azores Standard Time">(GMT-01:00) Azores</option>
+                                                        <option value="Cape Verde Standard Time">(GMT-01:00) Cape Verde
+                                                            Is.</option>
+                                                        <option value="E. South America Standard Time">(GMT-03:00)
+                                                            Brasilia</option>
+                                                        <option value="Argentina Standard Time">(GMT-03:00) Buenos Aires
+                                                        </option>
+                                                        <option value="SA Eastern Standard Time">(GMT-03:00) Georgetown
+                                                        </option>
+                                                        <option value="Greenland Standard Time">(GMT-03:00) Greenland
+                                                        </option>
+                                                        <option value="Montevideo Standard Time">(GMT-03:00) Montevideo
+                                                        </option>
+                                                        <option value="Newfoundland Standard Time">(GMT-03:30)
+                                                            Newfoundland</option>
+                                                        <option value="Atlantic Standard Time">(GMT-04:00) Atlantic Time
+                                                            (Canada)</option>
+                                                        <option value="SA Western Standard Time">(GMT-04:00) La Paz
+                                                        </option>
+                                                        <option value="Central Brazilian Standard Time">(GMT-04:00)
+                                                            Manaus</option>
+                                                        <option value="Pacific SA Standard Time">(GMT-04:00) Santiago
+                                                        </option>
+                                                        <option value="Venezuela Standard Time">(GMT-04:30) Caracas
+                                                        </option>
+                                                        <option value="SA Pacific Standard Time">(GMT-05:00) Bogota,
+                                                            Lima, Quito, Rio Branco</option>
+                                                        <option value="Eastern Standard Time">(GMT-05:00) Eastern Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="US Eastern Standard Time">(GMT-05:00) Indiana
+                                                            (East)</option>
+                                                        <option value="Central America Standard Time">(GMT-06:00)
+                                                            Central America</option>
+                                                        <option value="Central Standard Time">(GMT-06:00) Central Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="Central Standard Time (Mexico)">(GMT-06:00)
+                                                            Guadalajara, Mexico City, Monterrey</option>
+                                                        <option value="Canada Central Standard Time">(GMT-06:00)
+                                                            Saskatchewan</option>
+                                                        <option value="US Mountain Standard Time">(GMT-07:00) Arizona
+                                                        </option>
+                                                        <option value="Mountain Standard Time (Mexico)">(GMT-07:00)
+                                                            Chihuahua, La Paz, Mazatlan</option>
+                                                        <option value="Mountain Standard Time">(GMT-07:00) Mountain Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="Pacific Standard Time">(GMT-08:00) Pacific Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="Pacific Standard Time (Mexico)">(GMT-08:00)
+                                                            Tijuana, Baja California</option>
+                                                        <option value="Alaskan Standard Time">(GMT-09:00) Alaska
+                                                        </option>
+                                                        <option value="Hawaiian Standard Time">(GMT-10:00) Hawaii
+                                                        </option>
+                                                        <option value="Samoa Standard Time">(GMT-11:00) Midway Island,
+                                                            Samoa</option>
+                                                        <option value="Dateline Standard Time">(GMT-12:00) International
+                                                            Date Line West</option>
+                                                    </select></div>
+                                            </div>
+                                        </label></li>
+                                    <li class="k-item k-zonepicker" style="display:none"><label class="k-label"><span
+                                                class="k-item-title"></span>
+                                            <div><select></select></div>
+                                        </label></li>
+                                    <li class="k-item"><label class="k-label"><span class="k-item-title">End
+                                                timezone</span>
+                                            <div data-container-for="endTimezone">
+                                                <div class="k-mobiletimezoneeditor" data-bind="value:endTimezone"
+                                                    name="endTimezone" data-role="mobiletimezoneeditor"><select>
+                                                        <option value="">No timezone</option>
+                                                        <option value="Morocco Standard Time">(GMT) Casablanca</option>
+                                                        <option value="GMT Standard Time">(GMT) Greenwich Mean Time :
+                                                            Dublin, Edinburgh, Lisbon, London</option>
+                                                        <option value="Greenwich Standard Time">(GMT) Monrovia,
+                                                            Reykjavik</option>
+                                                        <option value="W. Europe Standard Time">(GMT+01:00) Amsterdam,
+                                                            Berlin, Bern, Rome, Stockholm, Vienna</option>
+                                                        <option value="Central Europe Standard Time">(GMT+01:00)
+                                                            Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                                                        <option value="Romance Standard Time">(GMT+01:00) Brussels,
+                                                            Copenhagen, Madrid, Paris</option>
+                                                        <option value="Central European Standard Time">(GMT+01:00)
+                                                            Sarajevo, Skopje, Warsaw, Zagreb</option>
+                                                        <option value="W. Central Africa Standard Time">(GMT+01:00) West
+                                                            Central Africa</option>
+                                                        <option value="Jordan Standard Time">(GMT+02:00) Amman</option>
+                                                        <option value="GTB Standard Time">(GMT+02:00) Athens, Bucharest,
+                                                            Istanbul</option>
+                                                        <option value="Middle East Standard Time">(GMT+02:00) Beirut
+                                                        </option>
+                                                        <option value="Egypt Standard Time">(GMT+02:00) Cairo</option>
+                                                        <option value="South Africa Standard Time">(GMT+02:00) Harare,
+                                                            Pretoria</option>
+                                                        <option value="FLE Standard Time">(GMT+02:00) Helsinki, Kyiv,
+                                                            Riga, Sofia, Tallinn, Vilnius</option>
+                                                        <option value="Israel Standard Time">(GMT+02:00) Jerusalem
+                                                        </option>
+                                                        <option value="E. Europe Standard Time">(GMT+02:00) Minsk
+                                                        </option>
+                                                        <option value="Namibia Standard Time">(GMT+02:00) Windhoek
+                                                        </option>
+                                                        <option value="Arabic Standard Time">(GMT+03:00) Baghdad
+                                                        </option>
+                                                        <option value="Arab Standard Time">(GMT+03:00) Kuwait, Riyadh
+                                                        </option>
+                                                        <option value="Russian Standard Time">(GMT+03:00) Moscow, St.
+                                                            Petersburg, Volgograd</option>
+                                                        <option value="E. Africa Standard Time">(GMT+03:00) Nairobi
+                                                        </option>
+                                                        <option value="Georgian Standard Time">(GMT+03:00) Tbilisi
+                                                        </option>
+                                                        <option value="Iran Standard Time">(GMT+03:30) Tehran</option>
+                                                        <option value="Arabian Standard Time">(GMT+04:00) Abu Dhabi,
+                                                            Muscat</option>
+                                                        <option value="Azerbaijan Standard Time">(GMT+04:00) Baku
+                                                        </option>
+                                                        <option value="Mauritius Standard Time">(GMT+04:00) Port Louis
+                                                        </option>
+                                                        <option value="Caucasus Standard Time">(GMT+04:00) Yerevan
+                                                        </option>
+                                                        <option value="Afghanistan Standard Time">(GMT+04:30) Kabul
+                                                        </option>
+                                                        <option value="Ekaterinburg Standard Time">(GMT+05:00)
+                                                            Ekaterinburg</option>
+                                                        <option value="Pakistan Standard Time">(GMT+05:00) Islamabad,
+                                                            Karachi</option>
+                                                        <option value="West Asia Standard Time">(GMT+05:00) Tashkent
+                                                        </option>
+                                                        <option value="India Standard Time">(GMT+05:30) Chennai,
+                                                            Kolkata, Mumbai, New Delhi</option>
+                                                        <option value="Sri Lanka Standard Time">(GMT+05:30) Sri
+                                                            Jayawardenepura</option>
+                                                        <option value="Nepal Standard Time">(GMT+05:45) Kathmandu
+                                                        </option>
+                                                        <option value="N. Central Asia Standard Time">(GMT+06:00)
+                                                            Almaty, Novosibirsk</option>
+                                                        <option value="Central Asia Standard Time">(GMT+06:00) Astana,
+                                                            Dhaka</option>
+                                                        <option value="Myanmar Standard Time">(GMT+06:30) Yangon
+                                                            (Rangoon)</option>
+                                                        <option value="SE Asia Standard Time">(GMT+07:00) Bangkok,
+                                                            Hanoi, Jakarta</option>
+                                                        <option value="North Asia Standard Time">(GMT+07:00) Krasnoyarsk
+                                                        </option>
+                                                        <option value="China Standard Time">(GMT+08:00) Beijing,
+                                                            Chongqing, Hong Kong, Urumqi</option>
+                                                        <option value="North Asia East Standard Time">(GMT+08:00)
+                                                            Irkutsk, Ulaan Bataar</option>
+                                                        <option value="Singapore Standard Time">(GMT+08:00) Kuala
+                                                            Lumpur, Singapore</option>
+                                                        <option value="W. Australia Standard Time">(GMT+08:00) Perth
+                                                        </option>
+                                                        <option value="Taipei Standard Time">(GMT+08:00) Taipei</option>
+                                                        <option value="Tokyo Standard Time">(GMT+09:00) Osaka, Sapporo,
+                                                            Tokyo</option>
+                                                        <option value="Korea Standard Time">(GMT+09:00) Seoul</option>
+                                                        <option value="Yakutsk Standard Time">(GMT+09:00) Yakutsk
+                                                        </option>
+                                                        <option value="Cen. Australia Standard Time">(GMT+09:30)
+                                                            Adelaide</option>
+                                                        <option value="AUS Central Standard Time">(GMT+09:30) Darwin
+                                                        </option>
+                                                        <option value="E. Australia Standard Time">(GMT+10:00) Brisbane
+                                                        </option>
+                                                        <option value="AUS Eastern Standard Time">(GMT+10:00) Canberra,
+                                                            Melbourne, Sydney</option>
+                                                        <option value="West Pacific Standard Time">(GMT+10:00) Guam,
+                                                            Port Moresby</option>
+                                                        <option value="Tasmania Standard Time">(GMT+10:00) Hobart
+                                                        </option>
+                                                        <option value="Vladivostok Standard Time">(GMT+10:00)
+                                                            Vladivostok</option>
+                                                        <option value="Central Pacific Standard Time">(GMT+11:00)
+                                                            Magadan, Solomon Is., New Caledonia</option>
+                                                        <option value="New Zealand Standard Time">(GMT+12:00) Auckland,
+                                                            Wellington</option>
+                                                        <option value="Fiji Standard Time">(GMT+12:00) Fiji, Kamchatka,
+                                                            Marshall Is.</option>
+                                                        <option value="Tonga Standard Time">(GMT+13:00) Nuku'alofa
+                                                        </option>
+                                                        <option value="Azores Standard Time">(GMT-01:00) Azores</option>
+                                                        <option value="Cape Verde Standard Time">(GMT-01:00) Cape Verde
+                                                            Is.</option>
+                                                        <option value="E. South America Standard Time">(GMT-03:00)
+                                                            Brasilia</option>
+                                                        <option value="Argentina Standard Time">(GMT-03:00) Buenos Aires
+                                                        </option>
+                                                        <option value="SA Eastern Standard Time">(GMT-03:00) Georgetown
+                                                        </option>
+                                                        <option value="Greenland Standard Time">(GMT-03:00) Greenland
+                                                        </option>
+                                                        <option value="Montevideo Standard Time">(GMT-03:00) Montevideo
+                                                        </option>
+                                                        <option value="Newfoundland Standard Time">(GMT-03:30)
+                                                            Newfoundland</option>
+                                                        <option value="Atlantic Standard Time">(GMT-04:00) Atlantic Time
+                                                            (Canada)</option>
+                                                        <option value="SA Western Standard Time">(GMT-04:00) La Paz
+                                                        </option>
+                                                        <option value="Central Brazilian Standard Time">(GMT-04:00)
+                                                            Manaus</option>
+                                                        <option value="Pacific SA Standard Time">(GMT-04:00) Santiago
+                                                        </option>
+                                                        <option value="Venezuela Standard Time">(GMT-04:30) Caracas
+                                                        </option>
+                                                        <option value="SA Pacific Standard Time">(GMT-05:00) Bogota,
+                                                            Lima, Quito, Rio Branco</option>
+                                                        <option value="Eastern Standard Time">(GMT-05:00) Eastern Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="US Eastern Standard Time">(GMT-05:00) Indiana
+                                                            (East)</option>
+                                                        <option value="Central America Standard Time">(GMT-06:00)
+                                                            Central America</option>
+                                                        <option value="Central Standard Time">(GMT-06:00) Central Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="Central Standard Time (Mexico)">(GMT-06:00)
+                                                            Guadalajara, Mexico City, Monterrey</option>
+                                                        <option value="Canada Central Standard Time">(GMT-06:00)
+                                                            Saskatchewan</option>
+                                                        <option value="US Mountain Standard Time">(GMT-07:00) Arizona
+                                                        </option>
+                                                        <option value="Mountain Standard Time (Mexico)">(GMT-07:00)
+                                                            Chihuahua, La Paz, Mazatlan</option>
+                                                        <option value="Mountain Standard Time">(GMT-07:00) Mountain Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="Pacific Standard Time">(GMT-08:00) Pacific Time
+                                                            (US &amp; Canada)</option>
+                                                        <option value="Pacific Standard Time (Mexico)">(GMT-08:00)
+                                                            Tijuana, Baja California</option>
+                                                        <option value="Alaskan Standard Time">(GMT-09:00) Alaska
+                                                        </option>
+                                                        <option value="Hawaiian Standard Time">(GMT-10:00) Hawaii
+                                                        </option>
+                                                        <option value="Samoa Standard Time">(GMT-11:00) Midway Island,
+                                                            Samoa</option>
+                                                        <option value="Dateline Standard Time">(GMT-12:00) International
+                                                            Date Line West</option>
+                                                    </select></div>
+                                            </div>
+                                        </label></li>
+                                    <li class="k-item k-zonepicker" style="display:none"><label class="k-label"><span
+                                                class="k-item-title"></span>
+                                            <div><select></select></div>
+                                        </label></li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <ul>
+                            <li class="k-item"><label class="k-label"><span class="k-item-title">Repeat</span>
+                                    <div data-container-for="recurrenceRule">
+                                        <div data-bind="value:recurrenceRule" name="recurrenceRule"
+                                            data-role="mobilerecurrenceeditor"><span class="">Never</span><span
+                                                class="k-icon k-i-arrow-chevron-right"></span></div>
+                                    </div>
+                                </label></li>
+                            <li class="k-item" style="display: none;"><label class="k-label"><span
+                                        class="k-item-title">Ends</span><label></label>
+                                    <div class="k-scheduler-recur-end-wrap"><span
+                                            class="k-scheduler-recur-end">Never</span></div>
+                                </label></li>
+                        </ul>
+                        <ul>
+                            <li class="k-item"><label class="k-label"><span class="k-item-title">Description</span>
+                                    <div data-container-for="description"><textarea name="description" class="k-textbox"
+                                            title="Description" data-bind="value:description"></textarea></div>
+                                </label></li>
+                            <li class="k-item"><label class="k-label"><span class="k-item-title">Owner</span>
+                                    <div data-container-for="ownerId"><select data-bind="value:ownerId">
+                                            <option value="1">Alex</option>
+                                            <option value="2">Bob</option>
+                                            <option value="3">Charlie</option>
+                                        </select></div>
+                                </label></li>
+                        </ul>
+                        <ul class="k-edit-buttons">
+                            <li class="k-item"><span href="#" class="k-scheduler-delete k-label"
+                                    aria-label="Delete">Delete</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

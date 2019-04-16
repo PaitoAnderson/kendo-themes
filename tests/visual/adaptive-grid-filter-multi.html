@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" class="k-typography">
+
+<head>
+    <title>Adaptive Grid Filter Multi</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../packages/default/dist/all.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/scripts.js"></script>
+
+    <style>
+        #test-area {
+            grid-template-columns: 1fr;
+            align-items: top;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="test-area" class="grid">
+
+        <div class="k-pane-wrapper k-widget" style="height: 550px;">
+            <div data-role="pane" class="k-pane" style="">
+                <div data-role="view" class="k-grid-filter-menu k-view k-widget"
+                    id="7ecb7e1c-28b6-419f-aee3-f91aeefdb272" role="view" style="">
+                    <div data-role="header" class="k-header"><a href="#" class="k-header-cancel k-link" title="Cancel"
+                            aria-label="Cancel"><span class="k-icon k-i-arrow-chevron-left"></span></a>Filter in Name<a
+                            href="#" class="k-header-done k-link" title="Done" aria-label="Done"><span
+                                class="k-icon k-i-check"></span></a></div>
+                    <div data-role="content" class="k-stretched-view k-content">
+                        <form class="k-filter-menu k-mobile-list">
+                            <ul>
+                                <li class="k-textbox k-space-right"><input placeholder="Search"><span
+                                        class="k-icon k-i-zoom"></span></li>
+                                <li class="k-filter-tools"><span style="" class="k-label k-select-all"
+                                        title="Select All" aria-label="Select All">Select All</span><span
+                                        class="k-label k-clear-all" title="Clear All" aria-label="Clear All">Clear
+                                        All</span></li>
+                                <li>
+                                    <div class="k-filter-selected-items">0 items selected</div>
+                                </li>
+                                <li>
+                                    <ul class="k-multicheck-wrap">
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Chai"><span class="k-item-title">Chai</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Chang"><span class="k-item-title">Chang</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Aniseed Syrup"><span class="k-item-title">Aniseed
+                                                    Syrup</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Chef Anton's Cajun Seasoning"><span class="k-item-title">Chef
+                                                    Anton's Cajun Seasoning</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Chef Anton's Gumbo Mix"><span class="k-item-title">Chef
+                                                    Anton's Gumbo Mix</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Grandma's Boysenberry Spread"><span
+                                                    class="k-item-title">Grandma's Boysenberry Spread</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Uncle Bob's Organic Dried Pears"><span
+                                                    class="k-item-title">Uncle Bob's Organic Dried Pears</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Northwoods Cranberry Sauce"><span
+                                                    class="k-item-title">Northwoods Cranberry Sauce</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Mishi Kobe Niku"><span class="k-item-title">Mishi Kobe
+                                                    Niku</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Ikura"><span class="k-item-title">Ikura</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Queso Cabrales"><span class="k-item-title">Queso
+                                                    Cabrales</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Queso Manchego La Pastora"><span class="k-item-title">Queso
+                                                    Manchego La Pastora</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Konbu"><span class="k-item-title">Konbu</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Tofu"><span class="k-item-title">Tofu</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Genen Shouyu"><span class="k-item-title">Genen
+                                                    Shouyu</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Pavlova"><span class="k-item-title">Pavlova</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Alice Mutton"><span class="k-item-title">Alice
+                                                    Mutton</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Carnarvon Tigers"><span class="k-item-title">Carnarvon
+                                                    Tigers</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Teatime Chocolate Biscuits"><span
+                                                    class="k-item-title">Teatime Chocolate Biscuits</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Sir Rodney's Marmalade"><span class="k-item-title">Sir
+                                                    Rodney's Marmalade</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Sir Rodney's Scones"><span class="k-item-title">Sir Rodney's
+                                                    Scones</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Gustaf's Knäckebröd"><span class="k-item-title">Gustaf's
+                                                    Knäckebröd</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Tunnbröd"><span class="k-item-title">Tunnbröd</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Guaraná Fantástica"><span class="k-item-title">Guaraná
+                                                    Fantástica</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="NuNuCa Nuß-Nougat-Creme"><span class="k-item-title">NuNuCa
+                                                    Nuß-Nougat-Creme</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Gumbär Gummibärchen"><span class="k-item-title">Gumbär
+                                                    Gummibärchen</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Schoggi Schokolade"><span class="k-item-title">Schoggi
+                                                    Schokolade</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Rössle Sauerkraut"><span class="k-item-title">Rössle
+                                                    Sauerkraut</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Thüringer Rostbratwurst"><span class="k-item-title">Thüringer
+                                                    Rostbratwurst</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Nord-Ost Matjeshering"><span class="k-item-title">Nord-Ost
+                                                    Matjeshering</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Gorgonzola Telino"><span class="k-item-title">Gorgonzola
+                                                    Telino</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Mascarpone Fabioli"><span class="k-item-title">Mascarpone
+                                                    Fabioli</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Geitost"><span class="k-item-title">Geitost</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Sasquatch Ale"><span class="k-item-title">Sasquatch
+                                                    Ale</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Steeleye Stout"><span class="k-item-title">Steeleye
+                                                    Stout</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Inlagd Sill"><span class="k-item-title">Inlagd
+                                                    Sill</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Gravad lax"><span class="k-item-title">Gravad
+                                                    lax</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Côte de Blaye"><span class="k-item-title">Côte de
+                                                    Blaye</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Chartreuse verte"><span class="k-item-title">Chartreuse
+                                                    verte</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Boston Crab Meat"><span class="k-item-title">Boston Crab
+                                                    Meat</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Jack's New England Clam Chowder"><span
+                                                    class="k-item-title">Jack's New England Clam Chowder</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Singaporean Hokkien Fried Mee"><span
+                                                    class="k-item-title">Singaporean Hokkien Fried Mee</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Ipoh Coffee"><span class="k-item-title">Ipoh
+                                                    Coffee</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Gula Malacca"><span class="k-item-title">Gula
+                                                    Malacca</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Rogede sild"><span class="k-item-title">Rogede
+                                                    sild</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Spegesild"><span
+                                                    class="k-item-title">Spegesild</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Zaanse koeken"><span class="k-item-title">Zaanse
+                                                    koeken</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Chocolade"><span
+                                                    class="k-item-title">Chocolade</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Maxilaku"><span class="k-item-title">Maxilaku</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Valkoinen suklaa"><span class="k-item-title">Valkoinen
+                                                    suklaa</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Manjimup Dried Apples"><span class="k-item-title">Manjimup
+                                                    Dried Apples</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Filo Mix"><span class="k-item-title">Filo Mix</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Perth Pasties"><span class="k-item-title">Perth
+                                                    Pasties</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Tourtière"><span
+                                                    class="k-item-title">Tourtière</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Pâté chinois"><span class="k-item-title">Pâté
+                                                    chinois</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Gnocchi di nonna Alice"><span class="k-item-title">Gnocchi di
+                                                    nonna Alice</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Ravioli Angelo"><span class="k-item-title">Ravioli
+                                                    Angelo</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Escargots de Bourgogne"><span class="k-item-title">Escargots
+                                                    de Bourgogne</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Raclette Courdavault"><span class="k-item-title">Raclette
+                                                    Courdavault</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Camembert Pierrot"><span class="k-item-title">Camembert
+                                                    Pierrot</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Sirop d'érable"><span class="k-item-title">Sirop
+                                                    d'érable</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Tarte au sucre"><span class="k-item-title">Tarte au
+                                                    sucre</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Vegie-spread"><span
+                                                    class="k-item-title">Vegie-spread</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Wimmers gute Semmelknödel"><span class="k-item-title">Wimmers
+                                                    gute Semmelknödel</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Louisiana Fiery Hot Pepper Sauce"><span
+                                                    class="k-item-title">Louisiana Fiery Hot Pepper Sauce</span></label>
+                                        </li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Louisiana Hot Spiced Okra"><span
+                                                    class="k-item-title">Louisiana Hot Spiced Okra</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Laughing Lumberjack Lager"><span
+                                                    class="k-item-title">Laughing Lumberjack Lager</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Scottish Longbreads"><span class="k-item-title">Scottish
+                                                    Longbreads</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Gudbrandsdalsost"><span
+                                                    class="k-item-title">Gudbrandsdalsost</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Outback Lager"><span class="k-item-title">Outback
+                                                    Lager</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Flotemysost"><span
+                                                    class="k-item-title">Flotemysost</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Mozzarella di Giovanni"><span class="k-item-title">Mozzarella
+                                                    di Giovanni</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Röd Kaviar"><span class="k-item-title">Röd
+                                                    Kaviar</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Longlife Tofu"><span class="k-item-title">Longlife
+                                                    Tofu</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Rhönbräu Klosterbier"><span class="k-item-title">Rhönbräu
+                                                    Klosterbier</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Lakkalikööri"><span
+                                                    class="k-item-title">Lakkalikööri</span></label></li>
+                                        <li class="k-item"><label class="k-label"><input type="checkbox" class="k-check"
+                                                    value="Original Frankfurter grüne Soße"><span
+                                                    class="k-item-title">Original Frankfurter grüne Soße</span></label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en" class="k-typography">
+
+<head>
+    <title>Adaptive Scheduler Month</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../packages/default/dist/all.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/scripts.js"></script>
+
+    <style>
+        #test-area {
+            grid-template-columns: 1fr;
+            align-items: top;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="test-area" class="grid">
+
+        <div class="k-pane-wrapper k-widget" style="height: 600px;">
+            <div data-role="pane" class="k-pane" style="">
+                <div data-role="view" data-stretch="true" id="15079d9b-24ea-4bda-9de3-e79e8b9ee279"
+                    class="k-view k-widget" role="view" style="">
+                    <div data-role="content" class="k-stretched-view k-content">
+                        <div id="scheduler" data-role="scheduler"
+                            class="k-widget k-scheduler k-floatwrap k-scheduler-mobile" role="grid"
+                            aria-multiselectable="true" style="height: 600px;">
+                            <div class="k-header k-scheduler-toolbar">
+                                <ul class="k-reset k-scheduler-tools">
+                                    <li><a role="button" href="#" class="k-button k-pdf"><span
+                                                class="k-icon k-i-file-pdf"></span></a></li>
+                                    <li><a role="button" href="#" class="k-button k-nav-calendar"><span
+                                                class="k-icon k-i-calendar"></span></a></li>
+                                    <li><a role="button" href="#" class="k-button k-create-event"><span
+                                                class="k-icon k-i-plus"></span></a></li>
+                                </ul><select class="k-scheduler-mobile-views">
+                                    <option class="k-state-default k-view-day" value="day">Day</option>
+                                    <option class="k-state-default k-view-workweek" value="workWeek">Work Week</option>
+                                    <option class="k-state-default k-view-week" value="week">Week</option>
+                                    <option class="k-state-default k-view-month" value="month">Month</option>
+                                    <option class="k-state-default k-view-agenda" value="agenda">Agenda</option>
+                                    <option class="k-state-default k-view-timeline" value="timeline">Timeline</option>
+                                </select>
+                            </div>
+                            <div class="k-header k-scheduler-toolbar">
+                                <ul class="k-reset k-header k-scheduler-navigation">
+                                    <li class="k-state-default k-nav-prev"><a role="button" href="#"
+                                            class="k-link"><span class="k-icon k-i-arrow-chevron-left"></span></a></li>
+                                    <li class="k-state-default k-nav-current"><span class="k-m-date-format"
+                                            data-bind="text: formattedMobileDate">June</span><span
+                                            class="k-y-date-format" data-bind="text: formattedYear">2013</span></li>
+                                    <li class="k-state-default k-nav-next"><a role="button" href="#"
+                                            class="k-link"><span class="k-icon k-i-arrow-chevron-right"></span></a></li>
+                                </ul>
+                            </div>
+                            <table class="k-scheduler-layout k-scheduler-monthview">
+                                <tbody>
+                                    <tr class="k-mobile-header">
+                                        <td>
+                                            <div class="k-scheduler-header k-state-default">
+                                                <div class="k-scheduler-header-wrap">
+                                                    <table class="k-scheduler-table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th colspan="1" class="">S</th>
+                                                                <th colspan="1" class="">M</th>
+                                                                <th colspan="1" class="">T</th>
+                                                                <th colspan="1" class="">W</th>
+                                                                <th colspan="1" class="">T</th>
+                                                                <th colspan="1" class="">F</th>
+                                                                <th colspan="1" class="">S</th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="k-scheduler-content" style="height: 425px;">
+                                                <table class="k-scheduler-table">
+                                                    <tbody>
+                                                        <tr role="row">
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">26</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">27</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">28</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">29</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">30</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">31</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">01</span></td>
+                                                        </tr>
+                                                        <tr role="row">
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">02</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">03</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">04</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">05</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">06</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">07</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">08</span></td>
+                                                        </tr>
+                                                        <tr role="row">
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">09</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">10</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">11</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">12</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">13</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">14</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">15</span></td>
+                                                        </tr>
+                                                        <tr role="row">
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">16</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">17</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">18</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">19</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">20</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">21</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">22</span></td>
+                                                        </tr>
+                                                        <tr role="row">
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">23</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">24</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">25</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">26</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">27</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">28</span></td>
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">29</span></td>
+                                                        </tr>
+                                                        <tr role="row">
+                                                            <td role="gridcell" aria-selected="false"><span
+                                                                    class="k-link k-nav-day">30</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">01</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">02</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">03</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">04</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">05</span></td>
+                                                            <td class=" k-other-month" role="gridcell"
+                                                                aria-selected="false"><span
+                                                                    class="k-link k-nav-day">06</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="k-events-container" style="top:97px;left:140px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="f3c94c5e-ece9-427f-a40d-a564c56c76ee"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container" style="top:97px;left:280px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="6bc984fd-ef3e-4bed-b1b0-8c584a337027"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Breakfast at Starbucks">
+                                                            <div class="k-event-template">Breakfast at Starbucks</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="e6f96ec0-f613-4e6d-b1ec-5763fb9fc2f6"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Software updates">
+                                                            <div class="k-event-template">Software updates</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="f7482227-b032-4e79-8956-a2e0b65cb0d5"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Performance review">
+                                                            <div class="k-event-template">Performance review</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container" style="top:97px;left:420px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="476622c3-2003-46f5-a2fe-f5ff25a75ba1"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="HR seminar preparation">
+                                                            <div class="k-event-template">HR seminar preparation</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="5157103d-9ff2-456b-a7c8-3d7dd351eeb8"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Helpdesk weekly meeting">
+                                                            <div class="k-event-template">Helpdesk weekly meeting</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="d53dd4fe-d7f6-443e-9e49-203951a65cce"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container" style="top:97px;left:560px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="611145b7-1ed2-40df-a01b-27b96b67010c"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="HR Lecture">
+                                                            <div class="k-event-template">HR Lecture</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container" style="top:97px;left:700px;width:141px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="db48c7ca-950b-4dbe-8ef6-0f799ac2bcb7"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Website upload">
+                                                            <div class="k-event-template">Website upload</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container" style="top:168px;left:0px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="a374c9ba-0a79-4a73-b759-5ebe6486b6c8"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Bowling tournament">
+                                                            <div class="k-event-template">Bowling tournament</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:168px;left:140px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="a374c9ba-0a79-4a73-b759-5ebe6486b6c8"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Bowling tournament">
+                                                            <div class="k-event-template">Bowling tournament</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="d34d7ff2-b48b-4f62-821a-32f4b733e6ff"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Take the dog to the vet">
+                                                            <div class="k-event-template">Take the dog to the vet</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="3b7c154b-7449-4eac-8813-99ce88503418"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:168px;left:280px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="07833d4b-1bab-49a0-912b-ae46d31d8484"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Call Charlie about the project">
+                                                            <div class="k-event-template">Call Charlie about the project
+                                                            </div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="4cd3b4e6-a8e5-4a67-a0ea-3cfbfbc0d1c6"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="HR Lecture">
+                                                            <div class="k-event-template">HR Lecture</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:168px;left:420px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="638dcd95-3dee-4889-b0f8-ac4c0b3fd467"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Meeting with Alex">
+                                                            <div class="k-event-template">Meeting with Alex</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="21d2890a-e457-4a9c-9c84-79b1d098bd32"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Helpdesk weekly meeting">
+                                                            <div class="k-event-template">Helpdesk weekly meeting</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="59328229-5751-4524-b348-ab13544914ae"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:168px;left:560px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="c25e8b6f-231f-4e92-bfaf-7c550e8b678b"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Test">
+                                                            <div class="k-event-template">Test</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="0d6e1fd8-7869-4569-9c8f-b76285a94249"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="HR Lecture">
+                                                            <div class="k-event-template">HR Lecture</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:168px;left:700px;width:141px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="4ee9661c-0403-4d8e-acfa-bcfa27988e93"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Alex's Birthday">
+                                                            <div class="k-event-template">Alex's Birthday</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:239px;left:140px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="3e5d9869-70ac-4489-a4ee-b6f5c1721e4e"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:239px;left:280px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="6ffc5449-88aa-48d5-8820-d42e10e79896"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="HR Lecture">
+                                                            <div class="k-event-template">HR Lecture</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:239px;left:420px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="311a921e-ed6e-48e2-a3d7-4bb2b324b38c"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Helpdesk weekly meeting">
+                                                            <div class="k-event-template">Helpdesk weekly meeting</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="32de211a-ca81-41c3-8510-d9382acb91ab"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:239px;left:560px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="f1a5e370-ab72-449c-9768-9520c714e115"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="HR Lecture">
+                                                            <div class="k-event-template">HR Lecture</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container" style="top:310px;left:0px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="f2eea2fb-d1c6-4ae9-8191-62210d7e8b31"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Grand Canyon tour">
+                                                            <div class="k-event-template">Grand Canyon tour</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:310px;left:140px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="d0df7d26-0284-4479-bcc9-c26a35d4d4a0"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Car Service">
+                                                            <div class="k-event-template">Car Service</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="df229471-e4a3-4728-823b-61a175d36f78"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Breakfast with Tom">
+                                                            <div class="k-event-template">Breakfast with Tom</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="ba8efe00-321e-4ef5-8bd9-a02664ad0b1a"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Team planning meeting">
+                                                            <div class="k-event-template">Team planning meeting</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:310px;left:280px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="2f913f8e-911b-4470-9754-025a20b77f41"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Attending HR Conference">
+                                                            <div class="k-event-template">Attending HR Conference</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="26f7156f-fd26-426a-a3ad-0fe0d013a957"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Business breakfast with Caroline">
+                                                            <div class="k-event-template">Business breakfast with
+                                                                Caroline</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="ba55be05-a129-4b13-b5d4-71199266ceb9"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Software updates">
+                                                            <div class="k-event-template">Software updates</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:310px;left:420px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="2f913f8e-911b-4470-9754-025a20b77f41"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Attending HR Conference">
+                                                            <div class="k-event-template">Attending HR Conference</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="945ae844-d310-4135-8085-ec517c4ffbfe"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Banking">
+                                                            <div class="k-event-template">Banking</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="32cf7ef2-e0fa-4efd-82f8-a0dc06cc771f"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Support Call">
+                                                            <div class="k-event-template">Support Call</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:310px;left:560px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="9f8d90f3-ee3f-42cb-a592-3349cf968d02"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Website upload">
+                                                            <div class="k-event-template">Website upload</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="f87e8f6d-8944-47e4-a679-b5a087205346"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Breakfast with CFO and COO">
+                                                            <div class="k-event-template">Breakfast with CFO and COO
+                                                            </div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="e5fc3315-98b1-47e9-8aed-7ea074551577"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Job Interview - Mathew Stevens">
+                                                            <div class="k-event-template">Job Interview - Mathew Stevens
+                                                            </div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:310px;left:700px;width:141px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="fdcc7398-fb08-4a60-b600-a1c784f92c61"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Dentist">
+                                                            <div class="k-event-template">Dentist</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="11388d0f-8b21-46a3-8222-a830f27363e9"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Job Interview - Laura Bailey">
+                                                            <div class="k-event-template">Job Interview - Laura Bailey
+                                                            </div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="d525d3b7-3fe2-44f9-98a5-2301e408017f"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Meeting with Internet provider">
+                                                            <div class="k-event-template">Meeting with Internet provider
+                                                            </div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:310px;left:841px;width:141px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="ade4891c-6c45-41fc-91b3-6b85148517cf"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Bob's Birthday">
+                                                            <div class="k-event-template">Bob's Birthday</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="c734d5a5-5738-48ec-af21-3da878b1ee20"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"></span>
+                                                        <div title="Bob's Birthday Party">
+                                                            <div class="k-event-template">Bob's Birthday Party</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:381px;left:140px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="ad0cc52b-081e-43a6-a103-8a70e784e095"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:381px;left:280px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="b2d72bbb-49ab-414f-89bb-c5796c7c9fff"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="HR Lecture">
+                                                            <div class="k-event-template">HR Lecture</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:381px;left:420px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="31720e69-58e7-4b5d-95b7-d0a0c0a236b3"
+                                                        style="background-color:#56ca85; border-color: #56ca85"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Helpdesk weekly meeting">
+                                                            <div class="k-event-template">Helpdesk weekly meeting</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="a2b23e10-387d-4b98-a20f-3fcaad4ac223"
+                                                        style="background-color:#51a0ed; border-color: #51a0ed"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="Dance Practice">
+                                                            <div class="k-event-template">Dance Practice</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="k-events-container"
+                                                    style="top:381px;left:560px;width:140px">
+                                                    <div role="gridcell" aria-selected="false"
+                                                        data-uid="7daff54a-30b6-4962-9a2f-a0d5f19228e7"
+                                                        style="background-color:#f8a398; border-color: #f8a398"
+                                                        class="k-event"><span class="k-event-actions"><span
+                                                                class="k-icon k-i-reload"></span></span>
+                                                        <div title="HR Lecture">
+                                                            <div class="k-event-template">HR Lecture</div>
+                                                        </div><span class="k-event-actions"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="k-header k-scheduler-footer"><span class="k-state-default k-scheduler-today"><a
+                                        href="#" class="k-link">Today</a></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

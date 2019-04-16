@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" class="k-typography">
+
+<head>
+    <title>Adaptive Grid Filter</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../packages/default/dist/all.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/scripts.js"></script>
+
+    <style>
+        #test-area {
+            grid-template-columns: 1fr;
+            align-items: top;
+        }
+
+        th {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="test-area" class="grid">
+
+        <div class="k-pane-wrapper k-widget" style="height: 550px;">
+            <div data-role="pane" class="k-pane" style="">
+                <div data-role="view" class="k-grid-filter-menu k-view k-widget"
+                    id="282a669e-fca5-4be7-90b1-4ab80a63c5a1" role="view" style="">
+                    <div data-role="header" class="k-header"><a href="#" class="k-header-cancel k-link" title="Cancel"
+                            aria-label="Cancel"><span class="k-icon k-i-arrow-chevron-left"></span></a>Filter in
+                        ProductID<a href="#" class="k-header-done k-link" title="Done" aria-label="Done"><span
+                                class="k-icon k-i-check"></span></a></div>
+                    <div data-role="content" class="k-stretched-view k-content">
+                        <form title="Show items with value that:" class="k-filter-menu k-mobile-list">
+                            <ul>
+                                <li><span class="k-filter-help-text">Show items with value that:</span>
+                                    <ul>
+                                        <li class="k-item"><label class="k-label"><span
+                                                    class="k-filter-operator-text">Operator</span><select
+                                                    class="k-filter-operator" data-bind="value: filters[0].operator">
+                                                    <option value="eq">Is equal to</option>
+                                                    <option value="neq">Is not equal to</option>
+                                                    <option value="startswith">Starts with</option>
+                                                    <option value="contains">Contains</option>
+                                                    <option value="doesnotcontain">Does not contain</option>
+                                                    <option value="endswith">Ends with</option>
+                                                    <option value="isnull">Is null</option>
+                                                    <option value="isnotnull">Is not null</option>
+                                                    <option value="isempty">Is empty</option>
+                                                    <option value="isnotempty">Is not empty</option>
+                                                    <option value="isnullorempty">Has no value</option>
+                                                    <option value="isnotnullorempty">Has value</option>
+                                                </select></label></li>
+                                        <li class="k-item"><label class="k-label"><span
+                                                    class="k-filter-input-text">Value</span><input
+                                                    data-bind="value:filters[0].value" class="k-value-input"
+                                                    type="text"></label></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="k-item"><label class="k-label"><span
+                                                    class="k-filter-logic-and-text">And</span><input type="radio"
+                                                    id="871eb95b-dc61-4e2f-b4f8-e191b5e3c1f1" name="logic"
+                                                    class="k-radio" data-bind="checked: logic" value="and"><label
+                                                    class="k-radio-label"
+                                                    for="871eb95b-dc61-4e2f-b4f8-e191b5e3c1f1"></label></label></li>
+                                        <li class="k-item"><label class="k-label"><span
+                                                    class="k-filter-logic-or-text">Or</span><input type="radio"
+                                                    id="85e9429a-a710-4920-a4e8-17f0898cf042" name="logic"
+                                                    class="k-radio" data-bind="checked: logic" value="or"><label
+                                                    class="k-radio-label"
+                                                    for="85e9429a-a710-4920-a4e8-17f0898cf042"></label></label></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="k-item"><label class="k-label"><span
+                                                    class="k-filter-operator-text">Additional operator</span><select
+                                                    class="k-filter-operator" data-bind="value: filters[1].operator">
+                                                    <option value="eq">Is equal to</option>
+                                                    <option value="neq">Is not equal to</option>
+                                                    <option value="startswith">Starts with</option>
+                                                    <option value="contains">Contains</option>
+                                                    <option value="doesnotcontain">Does not contain</option>
+                                                    <option value="endswith">Ends with</option>
+                                                    <option value="isnull">Is null</option>
+                                                    <option value="isnotnull">Is not null</option>
+                                                    <option value="isempty">Is empty</option>
+                                                    <option value="isnotempty">Is not empty</option>
+                                                    <option value="isnullorempty">Has no value</option>
+                                                    <option value="isnotnullorempty">Has value</option>
+                                                </select></label></li>
+                                        <li class="k-item"><label class="k-label"><span
+                                                    class="k-filter-input-text">Additional value</span><input
+                                                    data-bind="value:filters[1].value" class="k-value-input"
+                                                    type="text"></label></li>
+                                    </ul>
+                                </li>
+                                <li class="k-item k-clear-wrap"><span class="k-label k-clear" title="Clear"
+                                        aria-label="Clear">Clear</span></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
