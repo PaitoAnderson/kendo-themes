@@ -1,0 +1,171 @@
+@include exports("drawer/layout") {
+
+    .k-drawer {
+        position: relative;
+
+        .outerWrapper {
+            position: relative;
+            overflow-x: hidden;
+
+            .drawerContainer,
+            .drawerContent {
+                overflow-y: auto;
+                padding-right: 20px;
+
+                /* width */
+                &::-webkit-scrollbar {
+                    width: $drawer-scrollbar-width;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: $drawer-scrollbar-bg;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: $drawer-scrollbar-color;
+                    border-radius: $drawer-scrollbar-radius;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background:  $drawer-scrollbar-hovered-color;
+                }
+            }
+
+            .drawerContainer {
+                border-style: solid;
+                border-width: $drawer-border-width;
+                box-sizing: border-box;
+            }
+
+            &.overlay {
+                .drawerContainer {
+                    position:absolute;
+                    left: 0;
+                    right: auto;
+                    z-index: 1;
+                    transform: translateX(-100%);
+                    transition: all .3s ease-out;
+                    max-height: 100%;
+
+                    &.expanded {
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+
+            &.push {
+
+                display: flex;
+
+                .drawerContent {
+                    flex: 1 1 auto;
+                }
+
+                .drawerContainer {
+                    margin-left: -200px;
+                    position: relative;
+                    transition: all .3s ease-out;
+                    flex: 0 0 auto;
+
+                    &.expanded {
+                        margin-left: 0;
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            .overlayContainer {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #000;
+                opacity: 0.6;
+            }
+
+            &.expanded  {
+                .overlayContainer {
+                    display: block;
+                }
+            }
+
+
+            &.right {
+                &.overlay {
+                    .drawerContainer {
+                        left: auto;
+                        right: 0;
+                        transform: translateX(100%);
+
+                        &.expanded {
+                            transform: translateX(0);
+                        }
+                    }
+                }
+
+                &.push {
+                    .drawerContainer {
+                        order: 2;
+                        margin-left: 0;
+                        margin-right: -200px;
+
+                        &.expanded {
+                            margin-left: 20px;
+                            margin-right: 0;
+                        }
+                    }
+
+                    .drawerContent {
+                        order: 1;
+                    }
+                }
+            }
+        }
+
+        .k-rtl &,
+        &[dir="rtl"],
+        [dir="rtl"] & {
+
+            .outerWrapper {
+
+                &.push {
+                    .drawerContainer {
+                        order: 2;
+
+                    }
+
+                    .drawerContent {
+                        order: 1;
+                    }
+                }
+
+                &.right {
+
+                    &.push {
+                        .drawerContainer {
+                            order: 1;
+
+                        }
+
+                        .drawerContent {
+                            order: 2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .k-scrollbar {
+            width: 5px;
+
+        }
+    }
+}
+
+

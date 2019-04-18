@@ -1,0 +1,9 @@
+@include exports("drawer/theme") {
+    .k-drawer {
+        .drawerContainer {
+            background-color: $drawer-bg;
+            color: $drawer-text;
+            border-color: $drawer-border;
+        }
+    }
+}
