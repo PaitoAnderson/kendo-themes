@@ -1255,13 +1255,31 @@ $scheduler-current-time-color: #f00;
 $drawer-text: $base-text !default;
 $drawer-bg: $base-bg !default;
 $drawer-border: $base-border !default;
-$drawer-border-width: 0 1px 0 0 !default;
+$drawer-border-width: 0 1px 1px 0 !default;
 
 $drawer-scrollbar-width: 7px !default;
 $drawer-scrollbar-color: rgba(156, 156, 156, 0.7) !default;
 $drawer-scrollbar-bg: #dedede !default;
 $drawer-scrollbar-radius: 20px !default;
 $drawer-scrollbar-hovered-color: rgba(156, 156, 156, 1) !default;
+
+$drawer-item-padding-x: $padding-x !default;
+$drawer-item-padding-y: 12px !default;
+
+$drawer-item-line-height: $line-height-lg !default;
+$drawer-icon-size: calc(#{$font-size} * #{$drawer-item-line-height}) !default;
+
+$drawer-hovered-text: $hovered-text !default;
+$drawer-hovered-bg: $hovered-bg !default;
+
+$drawer-focused-bg: $hovered-bg !default;
+$drawer-focused-shadow: none !default;
+
+$drawer-selected-text: $secondary !default;
+$drawer-selected-bg: $base-bg !default;
+
+$drawer-selected-hover-text:  $secondary !default;
+$drawer-selected-hover-bg: $hovered-bg !default;
 
 
 // Config maps
