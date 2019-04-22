@@ -143,6 +143,12 @@
             .k-scheduler-recur-end-wrap {
                 white-space: nowrap;
             }
+
+            textarea.k-textbox {
+                width: 100%;
+                min-height: 4em;
+                resize: vertical;
+            }
         }
     }
 
@@ -746,6 +752,11 @@
                     .k-nav-next {
                         transform: scaleX(-1);
                     }
+                }
+
+                .k-task .k-i-reload {
+                    margin-left: .5em;
+                    margin-right: 0;
                 }
             }
 
