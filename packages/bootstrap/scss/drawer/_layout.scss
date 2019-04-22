@@ -1,1 +1,21 @@
 @import "~@progress/kendo-theme-default/scss/drawer/layout";
+
+@include exports( "drawer/layout/material" ) {
+    .k-drawer .outerWrapper {
+        .drawerContainer {
+            &.miniMode .drawer-items {
+                width: calc(2 * #{$drawer-item-padding-x} + #{$drawer-icon-size});
+            }
+        }
+
+        .drawer-items {
+            .k-icon {
+                padding-left: 0;
+            }
+
+            .item-text {
+                padding: 0;
+            }
+        }
+    }
+}

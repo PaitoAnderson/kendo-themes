@@ -16,25 +16,27 @@
                     width: $drawer-scrollbar-width;
                 }
 
-                &::-webkit-scrollbar-track {
-                    background: $drawer-scrollbar-bg;
-                }
-
                 &::-webkit-scrollbar-thumb {
-                    background: $drawer-scrollbar-color;
                     border-radius: $drawer-scrollbar-radius;
                 }
 
-                &::-webkit-scrollbar-thumb:hover {
-                    background:  $drawer-scrollbar-hovered-color;
-                }
             }
 
             .drawerContainer {
                 border-style: solid;
-                border-width: $drawer-border-width;
+                border-width: 0;
                 box-sizing: border-box;
-                width: 200px;
+                overflow-x: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                &.expanded {
+                    border-width: $drawer-border-width;
+                }
+
+                &.miniMode  .drawer-items {
+                    width: calc(4 * #{$drawer-item-padding-x} + #{$drawer-icon-size});
+                }
             }
 
             &.overlay {
@@ -55,33 +57,25 @@
 
 
             &.push {
-
                 display: flex;
 
                 .drawerContent {
                     flex: 1 1 auto;
+                    padding: 0 20px;
                 }
 
                 .drawerContainer {
-                    margin-left: -200px;
                     position: relative;
-                    transition: all .3s ease-out;
                     flex: 0 0 auto;
 
-                    &.expanded {
-                        margin-left: 0;
-                        margin-right: 20px;
+                    .drawer-items {
+                        width: 0;
+                        transition: all .3s ease-out;
                     }
 
-                    &.widthAuto {
-                        margin-left: 0;
-                        max-width: 0;
-                        flex: unset;
-
-
-                        &.expanded {
-                            max-width: 100vw;
-                            flex: unset;
+                    &.expanded {
+                        .drawer-items {
+                            width: 200px;
                         }
                     }
                 }
@@ -104,7 +98,6 @@
                 }
             }
 
-
             &.right {
                 &.overlay {
                     .drawerContainer {
@@ -121,12 +114,6 @@
                 &.push {
                     .drawerContainer {
                         order: 2;
-                        margin-left: 0;
-                        margin-right: -200px;
-
-                        &.expanded {
-                            margin-right: 0;
-                        }
                     }
 
                     .drawerContent {
@@ -139,13 +126,24 @@
                 .drawer-item {
                     display: block;
                     line-height: $drawer-item-line-height;
+                    font-size: 16px;
                     padding: $drawer-item-padding-y $drawer-item-padding-x;
+
+                    &.drawer-separator {
+                        padding: 0;
+                        height: 1px;
+                    }
                 }
 
                 .k-icon {
                     display: inline-block;
                     font-size: $drawer-icon-size;
-                    padding-right: $drawer-item-padding-x;
+                    padding: 0 $drawer-item-padding-x;
+                }
+
+                .item-text {
+                    display: inline-block;
+                    padding: 0 $drawer-item-padding-x;
                 }
             }
         }
