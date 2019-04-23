@@ -6,8 +6,9 @@
             border-color: $drawer-border;
         }
 
+        .drawerContent,
         .drawerContainer,
-        .drawerContent {
+        .drawerContainer .drawer-items {
             &::-webkit-scrollbar-track {
                 background: $drawer-scrollbar-bg;
             }

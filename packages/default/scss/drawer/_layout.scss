@@ -1,181 +1,179 @@
 @include exports("drawer/layout") {
 
-    .k-drawer {
-        position: relative;
+    .drawerContent,
+    .drawerContainer,
+    .drawerContainer .drawer-items {
+        overflow-y: auto;
 
-        .outerWrapper {
-            position: relative;
+        /* Scrollbar styles for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            width: $drawer-scrollbar-width;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: $drawer-scrollbar-radius;
+        }
+    }
+
+    .drawerContainer {
+        border-style: solid;
+        border-width: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        .drawer-items {
+            padding: 0;
+            width: 0;
+            transition: all .3s ease-out;
             overflow-x: hidden;
 
-            .drawerContainer,
-            .drawerContent {
-                overflow-y: auto;
+            .drawer-item {
+                display: block;
+                line-height: $drawer-item-line-height;
+                font-size: 16px;
+                padding: $drawer-item-padding-y $drawer-item-padding-x;
 
-                /* Scrollbar styles for Chrome, Safari and Opera */
-                &::-webkit-scrollbar {
-                    width: $drawer-scrollbar-width;
-                }
-
-                &::-webkit-scrollbar-thumb {
-                    border-radius: $drawer-scrollbar-radius;
-                }
-
-            }
-
-            .drawerContainer {
-                border-style: solid;
-                border-width: 0;
-                box-sizing: border-box;
-                overflow-x: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-
-                &.expanded {
-                    border-width: $drawer-border-width;
-                }
-
-                &.miniMode  .drawer-items {
-                    width: calc(4 * #{$drawer-item-padding-x} + #{$drawer-icon-size});
+                &.drawer-separator {
+                    padding: 0;
+                    height: 1px;
                 }
             }
 
-            &.overlay {
-                .drawerContainer {
-                    position:absolute;
-                    left: 0;
-                    right: auto;
-                    z-index: 1;
-                    transform: translateX(-100%);
-                    transition: all .3s ease-out;
-                    max-height: 100%;
-
-                    &.expanded {
-                        transform: translateX(0);
-                    }
-                }
+            .k-icon {
+                display: inline-block;
+                font-size: $drawer-icon-size;
+                padding: 0 $drawer-item-padding-x;
             }
 
-
-            &.push {
-                display: flex;
-
-                .drawerContent {
-                    flex: 1 1 auto;
-                    padding: 0 20px;
-                }
-
-                .drawerContainer {
-                    position: relative;
-                    flex: 0 0 auto;
-
-                    .drawer-items {
-                        width: 0;
-                        transition: all .3s ease-out;
-                    }
-
-                    &.expanded {
-                        .drawer-items {
-                            width: 200px;
-                        }
-                    }
-                }
+            .item-text {
+                display: inline-block;
+                padding: 0 $drawer-item-padding-x;
             }
+        }
 
-            .overlayContainer {
-                display: none;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #000;
-                opacity: 0.6;
-            }
-
-            &.expanded  {
-                .overlayContainer {
-                    display: block;
-                }
-            }
-
-            &.right {
-                &.overlay {
-                    .drawerContainer {
-                        left: auto;
-                        right: 0;
-                        transform: translateX(100%);
-
-                        &.expanded {
-                            transform: translateX(0);
-                        }
-                    }
-                }
-
-                &.push {
-                    .drawerContainer {
-                        order: 2;
-                    }
-
-                    .drawerContent {
-                        order: 1;
-                    }
-                }
-            }
+        &.expanded {
+            border-width: $drawer-border-width;
 
             .drawer-items {
-                .drawer-item {
-                    display: block;
-                    line-height: $drawer-item-line-height;
-                    font-size: 16px;
-                    padding: $drawer-item-padding-y $drawer-item-padding-x;
+                width: $drawer-initial-width; /* Default width of sidebar */
+            }
+        }
+    }
 
-                    &.drawer-separator {
-                        padding: 0;
-                        height: 1px;
-                    }
-                }
+    .outerWrapper {
+        position: relative;
+        overflow-x: hidden;
 
-                .k-icon {
-                    display: inline-block;
-                    font-size: $drawer-icon-size;
-                    padding: 0 $drawer-item-padding-x;
-                }
+        &.miniMode {
+            .drawer-items {
+                overflow-y: visible;
+                overflow-x: initial;
+                width: $drawer-mini-initial-width; /* Default width of mini sidebar */
+            }
 
-                .item-text {
-                    display: inline-block;
-                    padding: 0 $drawer-item-padding-x;
+             &.expanded .drawer-items {
+                width: $drawer-initial-width; /* Default width of sidebar */
+            }
+        }
+
+        &.overlay {
+            .drawerContainer {
+                position:absolute;
+                left: 0;
+                right: auto;
+                z-index: 1;
+                max-height: 100%;
+            }
+
+            &.miniMode {
+                .drawerContent {
+                    padding-left: $drawer-mini-initial-width;
                 }
             }
         }
 
-        .k-rtl &,
-        &[dir="rtl"],
-        [dir="rtl"] & {
 
-            .outerWrapper {
+        &.push {
+            display: flex;
 
+            .drawerContent {
+                flex: 1 1 auto;
+            }
+
+            .drawerContainer {
+                position: relative;
+                flex: 0 0 auto;
+            }
+        }
+
+        .overlayContainer {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            opacity: 0.6;
+        }
+
+        &.expanded  {
+            .overlayContainer {
+                display: block;
+            }
+        }
+
+        &.right {
+            &.overlay {
+                .drawerContainer {
+                    left: auto;
+                    right: 0;
+                }
+
+                &.miniMode {
+                    .drawerContent {
+                        padding-left: 0;
+                        padding-right: $drawer-mini-initial-width;
+                    }
+                }
+            }
+
+            &.push {
+                .drawerContainer {
+                    order: 2;
+                }
+
+                .drawerContent {
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    .k-rtl,
+    [dir="rtl"] {
+
+        .outerWrapper {
+            &.push {
+                .drawerContainer {
+                    order: 2;
+                }
+
+                .drawerContent {
+                    order: 1;
+                }
+            }
+
+            &.right {
                 &.push {
                     .drawerContainer {
-                        order: 2;
-
+                        order: 1;
                     }
 
                     .drawerContent {
-                        order: 1;
-                    }
-                }
-
-                &.right {
-
-                    &.push {
-                        .drawerContainer {
-                            order: 1;
-
-                        }
-
-                        .drawerContent {
-                            order: 2;
-                        }
+                        order: 2;
                     }
                 }
             }

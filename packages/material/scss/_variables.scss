@@ -1265,9 +1265,11 @@ $drawer-scrollbar-hovered-color: rgba(156, 156, 156, 1) !default;
 
 $drawer-item-padding-x: $padding-x !default;
 $drawer-item-padding-y: 12px !default;
-
 $drawer-item-line-height: $line-height-lg !default;
 $drawer-icon-size: calc(#{$font-size} * #{$drawer-item-line-height}) !default;
+
+$drawer-initial-width: 200px !default;
+$drawer-mini-initial-width: calc(2 * #{$drawer-item-padding-x} + #{$drawer-icon-size}) !default;
 
 $drawer-hovered-text: $hovered-text !default;
 $drawer-hovered-bg: $hovered-bg !default;
