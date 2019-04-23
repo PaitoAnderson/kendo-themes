@@ -15,6 +15,11 @@
         }
     }
 
+    .drawerContent {
+        box-sizing: border-box;
+        padding: $drawer-content-padding-y $drawer-content-padding-x;
+    }
+
     .drawerContainer {
         border-style: solid;
         border-width: 0;
@@ -67,6 +72,10 @@
         overflow-x: hidden;
 
         &.miniMode {
+            .drawerContainer {
+                border-width: $drawer-border-width;
+            }
+
             .drawer-items {
                 overflow-y: visible;
                 overflow-x: initial;
@@ -89,7 +98,7 @@
 
             &.miniMode {
                 .drawerContent {
-                    padding-left: $drawer-mini-initial-width;
+                    padding-left: calc(#{$drawer-mini-initial-width} + #{$drawer-content-padding-x} + 20px);
                 }
             }
         }
@@ -135,7 +144,7 @@
                 &.miniMode {
                     .drawerContent {
                         padding-left: 0;
-                        padding-right: $drawer-mini-initial-width;
+                        padding-right: calc(#{$drawer-mini-initial-width} + #{$drawer-content-padding-x} + 20px);
                     }
                 }
             }

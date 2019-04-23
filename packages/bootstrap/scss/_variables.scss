@@ -1186,6 +1186,8 @@ $drawer-text: $text-color !default;
 $drawer-bg: $bg-color !default;
 $drawer-border: $border-color !default;
 $drawer-border-width: 0 1px 0 0 !default;
+$drawer-content-padding-x: $padding-x !default;
+$drawer-content-padding-y: $padding-y !default;
 
 $drawer-scrollbar-width: 7px !default;
 $drawer-scrollbar-color: rgba(156, 156, 156, 0.7) !default;
@@ -1210,7 +1212,7 @@ $drawer-focused-shadow: $list-item-focused-shadow !default;
 $drawer-selected-text: $selected-text !default;
 $drawer-selected-bg: $selected-bg !default;
 $drawer-selected-hover-text: $selected-text !default;
-$drawer-selected-hover-bg: $selected-bg !default;
+$drawer-selected-hover-bg: try-darken( $selected-bg, 7.5% ) !default;
 
 
 // Config maps
