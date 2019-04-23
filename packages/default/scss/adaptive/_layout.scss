@@ -163,9 +163,8 @@
             font-weight: normal;
         }
 
-        .k-event .k-event-delete,
-        tr > td > .k-task .k-event-delete {
-            display: inline-block;
+        .k-event:hover .k-resize-handle {
+            visibility: hidden;
         }
 
         .k-scheduler-toolbar {
